@@ -8,12 +8,12 @@ pip install -r backend/dependencies.txt
 
 # Follow the rest of the setup instructions
 cd backend
-python manage.py makemigrations
 python manage.py migrate
+python manage.py makemigrations
 python manage.py createsuperuser
 python manage.py create_roles
 python manage.py collectstatic
-python manage.py runserver
+python manage.py runserver 9000
 
 
 cd ../frontend

@@ -1,0 +1,122 @@
+CustomChatGPT_Project:
+  Project_Structure:
+    - path: /home/hvadmin/proj/CustomChatGPT/README.md
+      description: "Project overview and instructions."
+    - path: /home/hvadmin/proj/CustomChatGPT/db/init_design.sql
+      description: "Database schema design."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/manage.py
+      description: "Django management script."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/dependencies.txt
+      description: "List of backend dependencies."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/server.py
+      description: "Uvicorn server configuration."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/.flake8
+      description: "Flake8 configuration for code style."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/pyproject.toml
+      description: "Project configuration for tools like isort and black."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/setup.py
+      description: "Setup script for the backend package."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/.env
+      description: "Environment variables for the backend."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/chat/models.py
+      description: "Django models for chat functionality."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/chat/admin.py
+      description: "Django admin configuration for chat models."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/chat/urls.py
+      description: "URL routing for chat views."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/chat/views.py
+      description: "Django views for chat functionality."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/chat/serializers.py
+      description: "Django REST Framework serializers for chat models."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/authentication/models.py
+      description: "Custom user model for authentication."
+    - path: /home/hvadmin/proj/CustomChatGPT/backend/authentication/views.py
+      description: "Authentication views."
+    - path: /home/hvadmin/proj/CustomChatGPT/frontend/config.js
+      description: "Frontend configuration."
+    - path: /home/hvadmin/proj/CustomChatGPT/frontend/package.json
+      description: "Frontend dependencies and scripts."
+    - path: /home/hvadmin/proj/CustomChatGPT/frontend/pages/index.js
+      description: "Main chat page component."
+    - path: /home/hvadmin/proj/CustomChatGPT/frontend/components/chat/Main.js
+      description: "Main chat component."
+    - path: /home/hvadmin/proj/CustomChatGPT/frontend/components/auth/RegisterForm.js
+      description: "Registration form component."
+    - path: /home/hvadmin/proj/CustomChatGPT/frontend/components/auth/LoginForm.js
+      description: "Login form component."
+  
+  Architecture_Overview:
+    Backend:
+      Framework: "Django"
+      Language: "Python"
+      Database: "SQLite (to be migrated to PostgreSQL)"
+    Frontend:
+      Framework: "Next.js"
+      Language: "JavaScript (React)"
+  
+  Technologies_Used:
+    - Python
+    - Django
+    - Django Rest Framework
+    - React
+    - Next.js
+    - SQLite
+    - PostgreSQL (planned)
+  
+  Functionalities:
+    - "Regular chatting with history stored in DB."
+    - "Streaming responses."
+    - "Auto-generated titles using GPT-3.5."
+    - "Title editing for conversations."
+    - "Deletion of conversations."
+    - "Regeneration of assistant messages."
+    - "User message editing."
+    - "Model selection between GPT-3.5 and GPT-4."
+    - "Custom Django admin page for managing conversations."
+  
+  Deployment_Information:
+    Environment_Variables:
+      - "FRONTEND_URL: URL of frontend app."
+      - "BACKEND_URL: URL of backend app."
+      - "BE_ADMIN_EMAIL: Email for Django admin page."
+      - "BE_ADMIN_PASSWORD: Password for Django admin page."
+      - "DJANGO_SECRET_KEY: Django secret key."
+      - "OPENAI_API_TYPE: Type of OpenAI API."
+      - "OPENAI_API_BASE: Base URL for OpenAI API."
+      - "OPENAI_API_VERSION: Version of OpenAI API."
+      - "OPENAI_API_KEY: Key for OpenAI API."
+    Deployment_Strategies:
+      - "Dockerization planned."
+  
+  Testing_Strategies:
+    - "Unit tests for individual components."
+    - "Functional tests for API endpoints."
+    - "Integration tests for overall application flow."
+  
+  Error_Handling:
+    - "Django's built-in error handling for views."
+    - "Custom error responses for API endpoints."
+  
+  User_Interface_Components:
+    - "Responsive design using CSS modules."
+    - "Dynamic components for chat messages."
+    - "Forms for user authentication."
+  
+  Performance_Considerations:
+    - "Streaming responses to improve user experience."
+    - "Optimized database queries."
+  
+  Security_Measures:
+    - "CSRF protection for forms."
+    - "Secure session management."
+    - "User authentication and authorization."
+  
+  Future_Enhancements:
+    - "Dockerize the application."
+    - "Migrate database to PostgreSQL."
+    - "Add support for additional LLMs (Claude, LLaMa)."
+    - "Implement async views in Django."
+  
+  Documentation:
+    - "README.md for project overview and setup instructions."
+    - "Inline comments in code for clarity."
