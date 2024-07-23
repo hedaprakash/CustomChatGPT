@@ -31,3 +31,5 @@ server/dist
 
 # prompts
 prompts/debug
+troubleshoot/manual_env.txt
+troubleshoot/vscode_env.txt
