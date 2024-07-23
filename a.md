@@ -16,7 +16,7 @@ python manage.py collectstatic
 python manage.py runserver 9000
 
 
-cd ../frontend
+cd ~/proj/CustomChatGPT/frontend
 
 # Ensure dependencies are installed
 sudo apt update
@@ -29,10 +29,22 @@ sudo apt update
 sudo apt install -y nodejs npm
 sudo npm cache clean -f
 sudo npm install -g n
+sudo npm install -g next
 sudo n stable
 
+node -v
+npm -v
 
 # Start the development server
+cd ~/proj/CustomChatGPT/frontend
+npm run dev
+
+# Reinstall Node Modules:
+Sometimes, above command fail then the installation of node modules can fail or become corrupted. You can try reinstalling them:
+cd /home/hvadmin/proj/CustomChatGPT/frontend
+rm -rf node_modules
+npm install
+
 npm run dev
 
 Go to http://127.0.0.1:3000 and enjoy!
