@@ -63,3 +63,18 @@ cp ~/bkp/CustomChatGPT/.env.local ~/proj/CustomChatGPT/frontend/
 cp ~/bkp/CustomChatGPT/a.md  ~/proj/CustomChatGPT/
 
 
+
+
+
+
+which node
+which npm
+echo $PATH
+node --version
+npm --version
+
+cat /home/hvadmin/proj/CustomChatGPT/capture_env.js
+cat /home/hvadmin/proj/CustomChatGPT/manual_env.txt
+cat /home/hvadmin/proj/CustomChatGPT/vscode_env.txt
+
+tree /home/hvadmin/proj/CustomChatGPT
