@@ -78,3 +78,38 @@ cat /home/hvadmin/proj/CustomChatGPT/manual_env.txt
 cat /home/hvadmin/proj/CustomChatGPT/vscode_env.txt
 
 tree /home/hvadmin/proj/CustomChatGPT
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+
+# validate sur existance
+python manage.py shell
+Then run:
+python
+from authentication.models import CustomUser
+user = CustomUser.objects.get(email='prakash@starinnovative.com')
+print(user.is_active)
+
+
+# create new user
+curl -X POST http://127.0.0.1:9000/auth/register/ \
+-H "Content-Type: application/json" \
+-d '{"email": "abc@abcde.com", "password": "Advent1001#"}'
+
+curl -X POST http://127.0.0.1:9000/auth/login/ \
+-H "Content-Type: application/json" \
+-d '{"email": "abc@abcde.com", "password": "Advent1001#"}'
+
+curl -X POST http://127.0.0.1:9000/auth/login/ \
+-H "Content-Type: application/json" \
+-d '{"email": "prakash@starinnovative.com", "password": "qqqqqq1!"}'
+
+
+http://127.0.0.1:9000/auth/register/
+
+
+http://127.0.0.1:9000/auth/login/
+{"email": "prakash@starinnovative.com", "password": "qqqqqq1!"}

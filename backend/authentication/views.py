@@ -21,6 +21,7 @@ def csrf_token(request):
 
 @api_view(["POST"])
 def login_view(request):
+    print("Login request data:", request.data)  
     email = request.data.get("email")
     password = request.data.get("password")
 
@@ -63,12 +64,15 @@ def register_view(request):
     email = request.data.get("email")
     password = request.data.get("password")
     if not email or not password:
+        print("User created11:", email)  # Debugging line
         return JsonResponse({"error": "Email and password are required"}, status=status.HTTP_400_BAD_REQUEST)
 
     if CustomUser.objects.filter(email=email).exists():
+        print("User created 22:", email)  # Debugging line
         return JsonResponse({"error": "Email is already taken"}, status=status.HTTP_400_BAD_REQUEST)
 
     CustomUser.objects.create_user(email, password=password)
+    print("User created:", email)  # Debugging line
     return JsonResponse({"data": "User created successfully"}, status=status.HTTP_201_CREATED)
 
 

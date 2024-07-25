@@ -121,7 +121,7 @@ AUTHENTICATION_BACKENDS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "Europe/Warsaw"
+TIME_ZONE = "America/Los_Angeles"
 USE_TZ = True
 
 USE_I18N = True
